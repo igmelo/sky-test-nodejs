@@ -25,4 +25,4 @@ app.use("*", (req, res) => {
 });
 
 // eslint-disable-next-line no-console
-app.listen(3000, () => console.log("Servidor rodando..."));
+app.listen(process.env.PORT || 3000, () => console.log("Servidor rodando..."));
