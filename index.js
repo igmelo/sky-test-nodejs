@@ -8,7 +8,7 @@ const DB = require("./database");
 const authRoute = require("./routes/authRoute");
 const userRoute = require("./routes/users");
 
-mongoose.connect(DB.DATABASE_URL, DB.DB_CONFIG, (error) => {
+mongoose.connect(DB.DB_URL, DB.DB_CONFIG, (error) => {
   if (!error) {
     console.log("MongoDB Conectado");
   } else {
