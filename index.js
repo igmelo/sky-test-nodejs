@@ -8,7 +8,7 @@ const DB = require("./database");
 const authRoute = require("./routes/authRoute");
 const userRoute = require("./routes/users");
 
-mongoose.connect(DB.DB_URL, DB.DB_CONFIG, (error) => {
+mongoose.connect(DB.DATABASE_URL, DB.DB_CONFIG, (error) => {
   if (!error) {
     console.log("MongoDB Conectado");
   } else {
@@ -24,4 +24,5 @@ app.use("*", (req, res) => {
   res.status(404).json({ mensagem: "mensagem de erro" });
 });
 
-app.listen(process.env.PORTA, () => console.log("Servidor rodando..."));
+// eslint-disable-next-line no-console
+app.listen(process.env.PORT, () => console.log("Servidor rodando..."));
